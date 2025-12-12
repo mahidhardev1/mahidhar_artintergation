@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cultural Dances — Tamil Nadu & West Bengal</title>
+
+<style>
+/* -------------------------------------
+         BEAUTIFUL BACKGROUND
+-------------------------------------- */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #e9eef7;
+  background: radial-gradient(circle at top left, #0c1022, #0f172a, #0d1b2e);
+  overflow-x: hidden;
+}
+
+/* Floating Bubbles */
+.bubble {
+  position: fixed;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 25px rgba(255,255,255,0.15);
+  animation: floatUp 12s infinite linear;
+  z-index: -1;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(120vh) scale(0.6); }
+  to   { transform: translateY(-20vh) scale(1.1); }
+}
+
+/* Generate multiple bubbles */
+.b1 { width: 90px; height: 90px; left: 10%; animation-duration: 11s; }
+.b2 { width: 60px; height: 60px; left: 30%; animation-duration: 13s; }
+.b3 { width: 120px; height: 120px; left: 50%; animation-duration: 15s; }
+.b4 { width: 50px; height: 50px; left: 70%; animation-duration: 10s; }
+.b5 { width: 100px; height: 100px; left: 85%; animation-duration: 17s; }
+
+/* -------------------------------------
+             NAVIGATION BAR
+-------------------------------------- */
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(12px);
+  padding: 18px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  z-index: 100;
+}
+
+nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+nav a:hover {
+  color: #ff6b6b;
+  text-shadow: 0 0 10px #ff6b6b;
+}
+
+/* -------------------------------------
+                 TITLE
+-------------------------------------- */
+.title {
+  text-align: center;
+  margin-top: 40px;
+  animation: fadeIn 1.4s ease-out forwards;
+  opacity: 0;
+  font-size: 34px;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* -------------------------------------
+               CARD GRID
+-------------------------------------- */
+.grid {
+  max-width: 1150px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+/* Glass Card */
+.card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  backdrop-filter: blur(14px);
+  transition: 0.35s;
+  animation: cardLoad 1.2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes cardLoad {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.06);
+  border-color: #ff6b6b;
+  box-shadow: 0 20px 45px rgba(255,107,107,0.3);
+}
+
+/* Circle Image */
+.dance-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 25px rgba(255,255,255,0.2);
+  margin-bottom: 14px;
+  transition: 0.30s;
+}
+
+.card:hover .dance-img {
+  transform: scale(1.1) rotate(4deg);
+}
+
+/* Buttons */
+.more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background: #ff6b6b;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(255,107,107,0.35);
+}
+
+.more-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(255,107,107,0.5);
+}
+
+/* -------------------------------------
+            TEAM SECTION
+-------------------------------------- */
+.team-box {
+  margin: 50px auto;
+  max-width: 900px;
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.team-box h2 {
+  margin-bottom: 12px;
+  color: #ff6b6b;
+  text-shadow: 0 0 12px rgba(255,107,107,0.4);
+}
+
+.team-list {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.leader {
+  font-weight: 700;
+  color: #ffe169;
+  text-shadow: 0 0 10px #ffe169;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating Background Bubbles -->
+<div class="bubble b1"></div>
+<div class="bubble b2"></div>
+<div class="bubble b3"></div>
+<div class="bubble b4"></div>
+<div class="bubble b5"></div>
+
+<!-- NAVIGATION -->
+<nav>
+  <div><strong style="font-size:22px;">Cultural Dances</strong></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="bharatanatyam.html">Bharatanatyam</a>
+    <a href="karagattam.html">Karagattam</a>
+    <a href="kolattam.html">Kolattam</a>
+    <a href="chhau.html">Chhau</a>
+    <a href="rabindra.html">Rabindra Nritya</a>
+    <a href="gambhira.html">Gambhira</a>
+  </div>
+</nav>
+
+<!-- TITLE -->
+<h1 class="title">Cultural Dances of Tamil Nadu & West Bengal</h1>
+
+<!-- GRID OF DANCES -->
+<div class="grid">
+
+  <div class="card">
+    <img class="dance-img" src="images/bharatanatyam.jpg" alt="">
+    <h3>Bharatanatyam</h3>
+    <p>Classical — Tamil Nadu</p>
+    <a class="more-btn" href="bharatanatyam.html">More Info →</a>
+  </div>
+
+  <div class="card">
+    <img class="dance-img" src="images/karagattam.jpg" alt="">
+    <h3>Karagattam</h3>
+    <p>Folk — Tamil Nadu</p>
+    <a class="more-btn" href="karagattam.html">More Info →</a>
+  </div>
+
+  <div class="card">
+    <img class="dance-img" src="images/kolattam.jpg" alt="">
+    <h3>Kolattam</h3>
+    <p>Stick Dance — Tamil Nadu</p>
+    <a class="more-btn" href="kolattam.html">More Info →</a>
+  </div>
+
+  <div class="card">
+    <img class="dance-img" src="images/chhau.jpg" alt="">
+    <h3>Purulia Chhau</h3>
+    <p>Masked Folk — West Bengal</p>
+    <a class="more-btn" href="chhau.html">More Info →</a>
+  </div>
+
+  <div class="card">
+    <img class="dance-img" src="images/rabindra.jpg" alt="">
+    <h3>Rabindra Nritya</h3>
+    <p>Tagore Dance — West Bengal</p>
+    <a class="more-btn" href="rabindra.html">More Info →</a>
+  </div>
+
+  <div class="card">
+    <img class="dance-img" src="images/gambhira.jpg" alt="">
+    <h3>Gambhira</h3>
+    <p>Folk Theatre — West Bengal</p>
+    <a class="more-btn" href="gambhira.html">More Info →</a>
+  </div>
+
+</div>
+
+<!-- TEAM SECTION -->
+<div class="team-box">
+  <h2>Our Project Team</h2>
+  <p class="team-list">
+    <span class="leader">👑 Leader: Your Leader Name</span><br>
+    ⭐ Teammate 1<br>
+    ⭐ Teammate 2<br>
+    ⭐ Teammate 3<br>
+    ⭐ Teammate 4
+  </p>
+</div>
+
+</body>
+</html>
